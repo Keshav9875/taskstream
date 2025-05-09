@@ -64,7 +64,7 @@ Taskstream/
 PORT_NO=9090
 CORS_ORIGIN=http://localhost:5173
 MONGO_URI=mongodb://127.0.0.1:27017/task_stream
-JWT_SECRET_KEY=$Secret@Key@123$
+JWT_SECRET_KEY=
 
 ##start backend 
 npm run dev
