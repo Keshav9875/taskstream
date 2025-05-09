@@ -1,85 +1,77 @@
-TaskEase
-TaskEase is a powerful and user-friendly task management application designed to help you organize your tasks efficiently. It provides features for creating, updating, deleting, and viewing tasks, along with secure user authentication.
+# 📝 Taskstream
 
-Features
-User Authentication: Register and login securely using JWT-based authentication.
-Task Management: CRUD operations for tasks.
-Modern UI: Built with React and Tailwind CSS for a responsive and dynamic user experience.
-Backend API: Developed with Node.js and Express.js, with MongoDB as the database.
-Folder Structure
-TaskEase/
-├── Backend/         # Backend API built with Node.js, Express, and MongoDB
-|   |--controllers/
-|   |--middlewares/
-|   |--models/
-|   |--routes/
-|   |--services/
-|   |--connectionDB.js
-|   |--package-lock.json
-|   |--package.json
-|   |--server.js
-|   |--.env
-|   |--.gitignore
-├── Frontend/        # Frontend React application
-|    |--public/
-|    |--src/
-|    |    |--assets/
-|    |    |--components/
-|    |    |--contexts/
-|    |    |--pages/
-|    |    |--services/
-|    |    |--App.css
-|    |    |--App.jsx
-|    |    |--index.css
-|    |    |--main.jsx
-|    |--eslint.config.js
-|    |--index.html
-|    |--package-lock.json
-|    |--package.json
-|    |--postcss.config.js
-|    |--tailwind.config.js
-|    |--vite.config.js
-|    |--.env
-|    |--.gitignore
-├── README.md        # Project documentation
-Technologies Used
-Frontend
-React.js
-Vite
-Tailwind CSS
-Axios
-Backend
-Node.js
-Express.js
-MongoDB
-Mongoose
-JSON Web Tokens (JWT)
-Prerequisites
-Node.js (v14+ recommended)
-MongoDB (Local or Cloud instance)
-npm or yarn
-Backend Configuration
-Setup
-Navigate to the Backend folder:
+Taskstream is a powerful and user-friendly task management application designed to help you organize your tasks efficiently. It provides features for creating, updating, deleting, and viewing tasks, along with secure user authentication.
 
-cd Backend
-Install dependencies:
+## ✨ Features
 
-npm install
-Environment Variables
-Create a .env file in the Backend folder with the following content:
+- 🔒 **User Authentication**: Secure JWT-based registration and login
+- ✅ **Task Management**: Full CRUD operations for tasks
+- 🎨 **Modern UI**: Responsive React interface with Tailwind CSS
+- ⚙️ **Backend API**: Node.js/Express with MongoDB database
 
+## 📂 Folder Structure
+
+```text
+Taskstream/
+├── Backend/         # Node.js/Express/MongoDB API
+│   ├── controllers/ # Business logic
+│   ├── middlewares/ # Authentication handlers
+│   ├── models/      # MongoDB schemas
+│   ├── routes/      # API endpoints
+│   ├── services/    # Utility functions
+│   ├── config/      # Configuration files
+│   ├── server.js    # Entry point
+│   └── ...          # Config files
+├── Frontend/        # React/Vite application
+│    ├── public/     # Static assets
+│    ├── src/        # Source code
+│    │    ├── assets/      # Images/fonts
+│    │    ├── components/  # UI components
+│    │    ├── contexts/    # React contexts
+│    │    ├── pages/       # View components
+│    │    └── services/    # API clients
+│    └── ...          # Config files
+└── README.md        # Project documentation
+
+## Technologies Used
+
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+
+## Prerequisites
+- Node.js (v14+ recommended)
+- MongoDB (Local or Cloud instance)
+- npm or yarn
+
+## Backend Configuration
+
+### Setup
+1. Navigate to the Backend folder:
+   ```bash
+   cd Backend
+   npm install
+##Environment Variables
 PORT_NO=9090
 CORS_ORIGIN=http://localhost:5173
-MONGO_URI=mongodb://127.0.0.1:27017/task_manager
+MONGO_URI=mongodb://127.0.0.1:27017/task_stream
 JWT_SECRET_KEY=$Secret@Key@123$
-Run the Backend
-Start the backend server:
 
+##start backend 
 npm run dev
+
 The backend server will run at http://localhost:9090.
 
-Frontend Configuration
+##Frontend Configuration
 Setup
 Navigate to the Frontend folder:
 
@@ -87,7 +79,7 @@ cd Frontend
 Install dependencies:
 
 npm install
-Environment Variables
+##Environment Variables
 Create a .env file in the Frontend folder with the following content:
 
 VITE_BACKEND_BASE_URL=http://localhost:9090
@@ -98,15 +90,27 @@ npm run dev
 The frontend application will run at http://localhost:5173.
 
 Usage
-Navigate to the frontend in your browser: http://localhost:5173.
-Register a new user account or log in with existing credentials.
-Manage your tasks by adding, editing, or deleting them.
+Navigate to the frontend in your browser: http://localhost:5173
+
+Register a new user account or log in with existing credentials
+
+Manage your tasks by adding, editing, or deleting them
+
 API Endpoints
 User Authentication
-POST /api/user/register: Register a new user.
-POST /api/user/login: Authenticate a user and receive a JWT.
+POST /api/user/register: Register a new user
+
+POST /api/user/login: Authenticate a user and receive a JWT
+
 Tasks
-GET /api/task: Fetch all tasks.
-POST /api/task: Create a new task.
-PATCH /api/task/:id: Update a task by ID.
-DELETE /api/task/:id: Delete a task by ID.
+GET /api/task: Fetch all tasks
+
+POST /api/task: Create a new task
+
+PATCH /api/task/:id: Update a task by ID
+
+DELETE /api/task/:id: Delete a task by ID
+
+
+
+   
